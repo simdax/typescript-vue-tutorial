@@ -1,0 +1,39 @@
+interface	Intervalles{
+		root: number;
+		allowed: Array<number>;
+}	
+
+class Intervalle implements Intervalles
+{
+		root: number;
+		allowed: Array<number>;
+
+		constructor(root: number, allowed: Array<number>){
+				this.root = root
+				this.allowed = allowed
+		}
+		private update() : void {
+				let res: Array<number> = [];
+				for (let allowed of this.allowed) {
+						res.push(this.root + allowed) 
+				}
+				return res;	
+		}
+		set_root(): void{
+				
+		}
+}
+
+
+export default class Bidule{
+		rien: string;
+		counter: number = 0;
+
+		constructor(){
+				let a = new Intervalle(0, [0, 2]);
+				console.log(a.get())
+		}	
+		calculate(){
+				
+		}
+}
